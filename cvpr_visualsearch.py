@@ -28,7 +28,7 @@ dst = []
 query = ALLFEAT[queryimg]
 for i in range(NIMG):
     candidate = ALLFEAT[i]
-    distance = cvpr_compare.L1_compare(query, candidate)
+    distance = cvpr_compare.L1Compare(query, candidate)
     dst.append((distance, i))
 
 # Sort the distances

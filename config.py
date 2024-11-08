@@ -7,3 +7,6 @@ DESCRIPTOR_SUBFOLDER = 'globalRGBhisto'
 
 DEFAULT_IMG_FILE_EXT = '.bmp'
 DEFAULT_DESCR_FILE_EXT = '.mat'
+
+#Quantization level of Global Colour Histogram (how many bins are along each axis)
+QUANTIZATION_LEVEL = 4
