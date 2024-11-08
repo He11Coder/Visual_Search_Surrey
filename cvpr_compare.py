@@ -1,10 +1,8 @@
 import numpy as np
 
-def cvpr_compare(F1, F2):
-    # This function should compare F1 to F2 - i.e. compute the distance
-    # between the two descriptors
-    # For now it just returns a random number
-    dst = np.random.rand()
-    return dst
+def L1_compare(F1, F2):
+    square_diffs = np.square(np.subtract(F1, F2))
+
+    return np.sqrt(np.sum(square_diffs))
 
 

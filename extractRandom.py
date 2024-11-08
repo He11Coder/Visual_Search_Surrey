@@ -1,9 +1,8 @@
 import numpy as np
 
-def extractRandom(img):
-    # Generate a random row vector with 30 elements
-    F = np.random.rand(1, 30)
-    # Returns a row [rand rand .... rand] representing an image descriptor
-    # computed from image 'img'
-    # Note img is expected to be a normalized RGB image (colors range [0,1] not [0,255])
-    return F
+def extractAverageRGB(img):
+    red_channel_mean = np.mean(img[:, :, 0])
+    green_channel_mean = np.mean(img[:, :, 1])
+    blue_channel_mean = np.mean(img[:, :, 2])
+
+    return np.array([red_channel_mean, green_channel_mean, blue_channel_mean])
