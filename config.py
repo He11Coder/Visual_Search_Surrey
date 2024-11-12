@@ -4,7 +4,7 @@ import numpy as np
 DATASET_FOLDER = 'MSRC_ObjCategImageDatabase_v2'
 DATASET_IMAGES_FOLDER = os.path.join(DATASET_FOLDER, 'Images')
 DESCRIPTOR_FOLDER = 'descriptors'
-DESCRIPTOR_SUBFOLDER = 'ColourHOGGridded_64cells_0.5Thr'
+DESCRIPTOR_SUBFOLDER = 'averageRGB'
 
 DEFAULT_IMG_FILE_EXT = '.bmp'
 DEFAULT_DESCR_FILE_EXT = '.mat'
@@ -23,6 +23,6 @@ NUM_OF_IMAGES = sum(NUM_OF_ELS_IN_CLASS)
 QUANTIZATION_LEVEL = 2
 
 #Quantization level of Sobel Gradient Direction (how many bins in 2pi radians)
-ANGLE_QUANTIZATION_LEVEL = 8
+ANGLE_QUANTIZATION_LEVEL = 16
 #Specifies the boundary from which we can consider Sobel Gradient magnitude as significant (strong edge)
 THRESHOLD_PERCENTILE = 0.5

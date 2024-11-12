@@ -1,5 +1,4 @@
 import numpy as np
-import cv2
 
 def sobelFilterRGB(img):
     sobel_kernel_x = np.array([[1, 0, -1],
