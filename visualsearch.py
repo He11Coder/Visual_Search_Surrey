@@ -10,7 +10,7 @@ import compare
 import metrics as pr_metric
 import config
 
-QUERY_IMAGES = ['2_6_s.bmp', '4_11_s.bmp', '13_10_s.bmp', '8_29_s.bmp', '9_23_s.bmp']
+QUERY_IMAGES = ['2_6_s.bmp', '4_11_s.bmp', '13_10_s.bmp', '8_29_s.bmp']
 QUERY_IMAGE = QUERY_IMAGES[0]
 
 # Load all descriptors
@@ -34,7 +34,7 @@ dst = []
 query = ALLFEAT[query_img_index]
 for i in range(config.NUM_OF_IMAGES):
     candidate = ALLFEAT[i]
-    distance = compare.LInftyCompare(query, candidate)
+    distance = compare.L1Compare(query, candidate)
     dst.append((distance, i))
 
 # Sort the distances

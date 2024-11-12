@@ -100,15 +100,3 @@ def extractColourHOGGridded(num_x_cells, num_y_cells, rgb_img):
             index_counter += (3 + config.ANGLE_QUANTIZATION_LEVEL)
     
     return descr
-
-'''
-v = np.array([[[27, 27, 28], [27, 14, 28]], [[14,  5,  4],[ 5,  6, 14]]])
-
-tuple_matrix = np.apply_along_axis(lambda x: tuple(x), 2, v)
-
-img = cv2.imread(os.path.join(config.DATASET_IMAGES_FOLDER, "1_1_s.bmp")).astype(np.float64) / 255.0
-
-
-print(np.divide(v.ravel(), np.sum(v.ravel())))
-
-print(np.uint32(np.floor(4*0.26)))'''
